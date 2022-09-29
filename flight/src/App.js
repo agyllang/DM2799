@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Routes, Route } from "react-router-dom";
-import { Row, Container, Col } from "react-bootstrap";
+import { Row, Container } from "react-bootstrap";
 
 import "./App.css";
 
-// import VerticalBar from "./components/VerticalBar";
+import VerticalBar from "./components/VerticalBar";
 import { data18 } from "./JML_data2018";
 import { data19 } from "./JML_data2019";
 // import Employees from "./components/employees/Employees";
@@ -213,46 +213,10 @@ const Dummy = (title) => {
   return (
     <Container>
       <Row className="page-title"> {title} </Row>
-      {/* <VerticalBar
+      <VerticalBar
         values={[1, 2, 3, 4, 5, 6, 7]}
         labels={[1, 2, 3, 4, 5, 6, 7]}
-      /> */}
-      <Col className="page-header2">Project Description</Col>
-      <Col>
-        <span>
-          {" "}
-          This prototype webapp was developed in DM2799 - Advanced Project
-          course in Media Technology. The student project group was tasked to
-          build a prototype that would visualize two datasets of academic
-          travel, flights by the MID research team during 2018 and 2019. Based
-          on previous reseach and with the counselling from the FLIGHT research
-          project, a specific user group was identified.{" "}
-        </span>
-        <br />
-        <br />
-        <span>
-          {" "}
-          The system would primarily be aimed at -{" "}
-          <b>
-            helping KTH heads of departments understand travel patterns and CO2
-            emissions at their department
-          </b>
-        </span>
-        <br />
-        <span>
-          The prototype was developed to be used in a theorized scenario, where
-          flight data would be produced on a monthly basis by KTH travel agency.
-        </span>
-        <Col className="page-header2">Project group </Col>
-        <Row>
-
-          <Col>Albin Matson Gyllang</Col>
-          <Col>Billy Jansheden</Col>
-          <Col>Josephine Kvarnberg</Col>
-          <Col>Sandra Sjöö</Col>
-          <Col>Sara Nazeriha</Col>
-        </Row>
-      </Col>
+      />
     </Container>
   );
 };
